@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".data.fragments.add.RoomFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        app:cardBackgroundColor="#F8F8FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backAdress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="TODO"
+            android:src="@drawable/ic_back_without_rect" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Стандартная уборка"
+            android:textColor="@color/color_text"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:id="@+id/tvRoomToiletTimePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat"
+            tools:text="1 Комната, 1 Санузел, 4 часа, 1290 ₽"
+            android:textSize="@dimen/_12ssp" />
+
+        <ImageButton
+            android:id="@+id/infoAdress"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:src="@drawable/ic_entypo_info_with_circle" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/tvAdditiontalTittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_45sdp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="Дополнительные услуги"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20ssp" />
+
+            <TextView
+                android:id="@+id/tvKitchen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Кухня"
+                android:textSize="@dimen/_13ssp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardWashDishes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbWashDishes"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#FE9738"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/ic_skovorodka" />
+
+                            <TextView
+                                android:id="@+id/tvWashPlate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Помыть\nплиту"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnPlate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#FE9739"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="320 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimePlate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="20 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardWashMicrowave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbWashMicrowave"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#FE9738"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/ic_microwawe" />
+
+                            <TextView
+                                android:id="@+id/tvWashMicrowave"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Помыть внутри микроволновки"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnMicrowave"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#FE9739"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="120 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeMicrowave"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="20 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardRemoveOdors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbRemoveOdors"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#FE9738"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_60sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/zapax" />
+
+                            <TextView
+                                android:id="@+id/tvOdors"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Помыть внутри микроволновки"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnOdors"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#FE9739"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="500 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeOdors"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="20 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#F2F2F2"
+                app:strokeWidth="1dp"
+                android:id="@+id/cardCleaningV2"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvCleaning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="Химчистка\nодежды"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnCleaning"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="#41434D"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:padding="5dp"
+                                android:text="320 ₽"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                app:cornerRadius="7dp" />
+
+                            <TextView
+                                android:id="@+id/tvTimeCleaning"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="8dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="20 мин."
+                                android:textColor="#CBBEB2" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/rubaha" />
+
+                    <CheckBox
+                        android:id="@+id/cbCleaning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:button="@drawable/additional_custom_checkbox"
+                        android:buttonTint="#41434D"
+                        android:checked="false"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/tvBathroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Санузел"
+                android:textSize="@dimen/_13ssp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:scrollbars="none"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        android:id="@+id/cardWashBath"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbWashBath"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#3656F9"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_75sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/wanna" />
+
+                            <TextView
+                                android:id="@+id/tvWashBath"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Помыть\nванну"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnWashBath"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/activeBottomNavIconColor"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="320 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeWashBath"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="15 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        android:id="@+id/cardRemoveScale"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbRemoveScale"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#3656F9"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/maschinka" />
+
+                            <TextView
+                                android:id="@+id/tvRemoveScale"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Убрать\nнакипь"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnRemoveScale"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/activeBottomNavIconColor"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="800 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeRemoveScale"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="15 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        android:id="@+id/cardDeepToiletClean"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbDeepToiletCleaning"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#3656F9"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_75sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/unitaz" />
+
+                            <TextView
+                                android:id="@+id/tvDeepToiletCleaning"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Убрать\nнакипь"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnDeepToiletCleaning"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/activeBottomNavIconColor"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="500 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeDeppToiletCleaning"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="15 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tvPets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Работа с питомцами"
+                android:textSize="@dimen/_13ssp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:scrollbars="none"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        android:id="@+id/cardWashPetTray"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbWashPetTray"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#FE9739"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_75sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/dog1" />
+
+                            <TextView
+                                android:id="@+id/tvWashPetTray"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Мытьё лотка\nпитомца"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnWashPetTray"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#FE9739"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="320 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeWashPetTray"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="10 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        android:id="@+id/cardCleaningWool"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbCleaningWool"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#FE9739"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_75sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/dog2" />
+
+                            <TextView
+                                android:id="@+id/tvCleaningWool"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Очистка\nот шерсти"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnCleaningWool"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#FE9739"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="120 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeCleaningWool"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="10 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        android:id="@+id/cardRecoveryAfterBites"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbRecoveryAfterBites"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#FE9739"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_75sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/dog3" />
+
+                            <TextView
+                                android:id="@+id/tvRecoveryAfterBites"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Восстановление\nпосле укусов"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnRecoveryAfterBites"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#FE9739"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="120 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeRecoveryAfterBites"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="10 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tvAdditionalServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Дополнительные услуги"
+                android:textSize="@dimen/_13ssp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:scrollbars="none"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        android:id="@+id/cardRemoveSomething"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbRemovesomething"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#41434D"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/ic_something" />
+
+                            <TextView
+                                android:id="@+id/tvRemoveSomething"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Убрать\nчто-то ещё"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnRemoveSomething"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#41434D"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="320 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeRemoveSomething"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="10 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        android:id="@+id/cardCleaningOfClothes"
+                        app:strokeColor="#F2F2F2"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbCleaningOfClothes"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#41434D"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_75sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/rubaha" />
+
+                            <TextView
+                                android:id="@+id/tvCleaningOfClothes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Химчистка\nодежды"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnCleaningOfClothes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#41434D"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="500 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeCleaningOfClothes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="20 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#F2F2F2"
+                        android:id="@+id/cardFurnitureDryCleaning"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <CheckBox
+                                android:id="@+id/cbFurnitureDryCleaning"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/additional_custom_checkbox"
+                                android:buttonTint="#41434D"
+                                android:checked="false"
+                                android:text="" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_75sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/kreslo" />
+
+                            <TextView
+                                android:id="@+id/tvFurnitureDryCleaning"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="Химчистка\nмебели"
+                                android:textSize="@dimen/_13ssp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnFurnitureDryCleaning"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#41434D"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:padding="5dp"
+                                    android:text="500 ₽"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    app:cornerRadius="7dp" />
+
+                                <TextView
+                                    android:id="@+id/tvTimeFurnitureDryCleaning"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:maxLines="1"
+                                    android:text="20 мин."
+                                    android:textColor="#CBBEB2" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/btnonadress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:background="@drawable/ic_blue_button"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tvtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="start"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="@dimen/_15ssp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="Далее"/>
+
+                <TextView
+                    android:id="@+id/tvprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/debugbro3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="24dp"
+                tools:layout_editor_absoluteY="34dp"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/debugbro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                android:visibility="gone"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="354dp"
+                tools:visibility="gone" />
+
+            <TextView
+                android:id="@+id/debugbro2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

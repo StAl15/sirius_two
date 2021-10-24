@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:title="Заказы"
+        android:icon="@drawable/ic_baseline_cleaning_services"/>
+    <item
+        android:id="@+id/clinerFragment"
+        android:title="Клинеры"
+        android:icon="@drawable/ic_cleaner"/>
+    <item
+        android:id="@+id/bonusFragment"
+        android:title="Бонусы"
+        android:icon="@drawable/ic_baseline_bonus"/>
+    <item
+        android:id="@+id/helpFragment"
+        android:title="Помощь"
+        android:icon="@drawable/ic_baseline_help"/>
+</menu>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".data.fragments.add.RoomFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnontime"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="Далее"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/montserrat_bold"
+        app:cornerRadius="@dimen/_10sdp"
+        android:backgroundTint="@color/activeBottomNavIconColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etComment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:gravity="left"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/form_rect_adress"
+        android:hint="Комментарий"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/color_text"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCorpus" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etStreet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/form_rect_adress"
+        android:hint="Улица"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/color_text"
+        android:paddingStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btnontime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCity"
+        app:layout_constraintVertical_bias="0.074" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etHome"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/form_rect_adress"
+        android:inputType="number"
+        android:hint="Дом"
+        android:paddingStart="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/color_text"
+        app:layout_constraintStart_toStartOf="@+id/etStreet"
+        app:layout_constraintTop_toBottomOf="@+id/etStreet" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etFlat"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/form_rect_adress"
+        android:hint="Квартира"
+        android:inputType="number"
+        android:paddingStart="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/color_text"
+        app:layout_constraintEnd_toEndOf="@+id/etStreet"
+        app:layout_constraintTop_toBottomOf="@+id/etStreet" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etCorpus"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/form_rect_adress"
+        android:hint="Корпус"
+        android:paddingStart="@dimen/_10sdp"
+        android:inputType="number"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/color_text"
+        app:layout_constraintStart_toStartOf="@+id/etHome"
+        app:layout_constraintTop_toBottomOf="@+id/etHome" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etEntrance"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/form_rect_adress"
+        android:hint="Подъезд"
+        android:inputType="number"
+        android:paddingStart="@dimen/_10sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/color_text"
+        app:layout_constraintEnd_toEndOf="@+id/etFlat"
+        app:layout_constraintTop_toBottomOf="@+id/etFlat" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/form_rect_adress"
+        android:fontFamily="@font/montserrat_bold"
+        android:hint="Город"
+        android:paddingStart="@dimen/_10sdp"
+        android:textColor="@color/color_text"
+        app:layout_constraintBottom_toTopOf="@+id/btnontime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        app:cardBackgroundColor="#F8F8FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backAdress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="?android:selectableItemBackground"
+            android:contentDescription="TODO"
+            android:src="@drawable/ic_back_without_rect" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Стандартная уборка"
+            android:textColor="@color/color_text"
+            android:textSize="@dimen/_16ssp" />
+
+        <TextView
+            android:id="@+id/tvRoomToiletTimePriceAdress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat"
+            tools:text="1 Комната, 1 Санузел, 4 часа, 1290 ₽"
+            android:textSize="@dimen/_12ssp" />
+
+        <ImageButton
+            android:id="@+id/infoAdress"
+            android:background="?android:selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:src="@drawable/ic_entypo_info_with_circle" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/ic_adress1_time_pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Адрес квартиры"
+        android:textColor="@color/color_text"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+
+    <!-- android:background="@drawable/rect_adress" -->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="255dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="#FFF2E6"
+        android:drawableLeft="@drawable/ic_marker"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:text="Указать на карте"
+        android:textAllCaps="false"
+        android:textColor="#CA7221"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
