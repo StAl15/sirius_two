@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="harshbarash.github.siriustwo.data.fragments.list.MainFragment"
+        android:name="stal15.sirius.siriustwo.data.fragments.list.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/clinerFragment"
-        android:name="harshbarash.github.siriustwo.ClinerFragment"
+        android:name="stal15.sirius.siriustwo.ClinerFragment"
         android:label="fragment_cliner"
         tools:layout="@layout/fragment_cliner" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/bonusFragment"
-        android:name="harshbarash.github.siriustwo.BonusFragment"
+        android:name="stal15.sirius.siriustwo.BonusFragment"
         android:label="fragment_bonus"
         tools:layout="@layout/fragment_bonus" >
         <action
@@ -64,7 +64,7 @@
     </fragment>
     <fragment
         android:id="@+id/helpFragment"
-        android:name="harshbarash.github.siriustwo.HelpFragment"
+        android:name="stal15.sirius.siriustwo.HelpFragment"
         android:label="fragment_help"
         tools:layout="@layout/fragment_help" >
         <action
@@ -82,7 +82,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="harshbarash.github.siriustwo.SplashFragment"
+        android:name="stal15.sirius.siriustwo.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -96,7 +96,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="harshbarash.github.siriustwo.onboarding.ViewPagerFragment"
+        android:name="stal15.sirius.siriustwo.onboarding.ViewPagerFragment"
         android:label="ViewPagerFragment"
         tools:layout="@layout/fragment_view_pager">
 
@@ -108,7 +108,7 @@
     </fragment>
     <fragment
         android:id="@+id/additionallyFragment"
-        android:name="harshbarash.github.siriustwo.data.fragments.add.AdditionallyFragment"
+        android:name="stal15.sirius.siriustwo.data.fragments.add.AdditionallyFragment"
         android:label="fragment_additionally"
         tools:layout="@layout/fragment_additionally" >
         <action
@@ -136,7 +136,7 @@
     </fragment>
     <fragment
         android:id="@+id/adressFragment"
-        android:name="harshbarash.github.siriustwo.data.fragments.add.AdressFragment"
+        android:name="stal15.sirius.siriustwo.data.fragments.add.AdressFragment"
         android:label="fragment_adress"
         tools:layout="@layout/fragment_adress" >
         <action
@@ -161,20 +161,18 @@
         <argument
             android:name="order"
             app:argType="string" />
-        <argument
-            android:name="orderPrice"
-            app:argType="string" />
-        <argument android:name="orderTime" />
+        <argument android:name="orderPrice" />
         <action
             android:id="@+id/action_adressFragment_to_additionallyFragment"
             app:destination="@id/additionallyFragment" />
         <action
             android:id="@+id/action_adressFragment_to_additionallyFragment2"
             app:destination="@id/additionallyFragment" />
+        <argument android:name="orderTime" />
     </fragment>
     <fragment
         android:id="@+id/dataFragment"
-        android:name="harshbarash.github.siriustwo.data.fragments.add.DataFragment"
+        android:name="stal15.sirius.siriustwo.data.fragments.add.DataFragment"
         android:label="fragment_data"
         tools:layout="@layout/fragment_data" >
         <action
@@ -199,8 +197,8 @@
         <argument
             android:name="order"
             app:argType="string" />
-        <argument android:name="orderTime" />
         <argument android:name="orderPrice" />
+        <argument android:name="orderTime" />
         <action
             android:id="@+id/action_dataFragment_to_adressFragment"
             app:destination="@id/adressFragment" />
@@ -228,7 +226,7 @@
     </fragment>
     <fragment
         android:id="@+id/payFragment"
-        android:name="harshbarash.github.siriustwo.data.fragments.add.PayFragment"
+        android:name="stal15.sirius.siriustwo.data.fragments.add.PayFragment"
         android:label="fragment_pay"
         tools:layout="@layout/fragment_payment" >
         <action
@@ -253,8 +251,8 @@
         <argument
             android:name="order"
             app:argType="string" />
-        <argument android:name="orderTime" />
         <argument android:name="orderPrice" />
+        <argument android:name="orderTime" />
         <argument
             android:name="city"
             app:argType="string" />
@@ -284,7 +282,7 @@
     </fragment>
     <fragment
         android:id="@+id/orderFragment"
-        android:name="harshbarash.github.siriustwo.data.fragments.add.OrderFragment"
+        android:name="stal15.sirius.siriustwo.data.fragments.add.OrderFragment"
         android:label="fragment_order"
         tools:layout="@layout/fragment_order" >
         <action
@@ -332,7 +330,8 @@
         <argument
             android:name="comment"
             app:argType="string" />
-        <argument android:name="data" />
+        <argument android:name="data"
+            app:argType="string" />
         <argument android:name="dataTime" />
         <action
             android:id="@+id/action_orderFragment_to_payFragment"
@@ -340,7 +339,7 @@
     </fragment>
     <fragment
         android:id="@+id/orderDoneFragment"
-        android:name="harshbarash.github.siriustwo.OrderDoneFragment"
+        android:name="stal15.sirius.siriustwo.OrderDoneFragment"
         android:label="fragment_order_done"
         tools:layout="@layout/fragment_order_done" >
         <action
@@ -358,7 +357,7 @@
     </fragment>
     <fragment
         android:id="@+id/roomFragment"
-        android:name="harshbarash.github.siriustwo.data.fragments.add.RoomFragment"
+        android:name="stal15.sirius.siriustwo.data.fragments.add.RoomFragment"
         android:label="fragment_room"
         tools:layout="@layout/fragment_room" >
         <action

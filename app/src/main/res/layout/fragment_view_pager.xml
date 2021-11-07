@@ -14,19 +14,19 @@
 
     </androidx.viewpager2.widget.ViewPager2>
 
-    <com.rd.PageIndicatorView
-        android:id="@+id/pageIndicatorView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_14sdp"
-        android:layout_marginTop="@dimen/_44sdp"
-        app:layout_constraintStart_toStartOf="@+id/viewPager"
-        app:layout_constraintTop_toTopOf="@+id/viewPager"
-        app:piv_animationType="worm"
-        app:piv_radius="5dp"
-        app:piv_selectedColor="@color/white"
-        app:piv_strokeWidth="5dp"
-        app:piv_unselectedColor="@color/firstonboarding"
-        app:piv_viewPager="@id/viewPager" />
+    <!--    <com.rd.PageIndicatorView-->
+    <!--        android:id="@+id/pageIndicatorView"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="@dimen/_14sdp"-->
+    <!--        android:layout_marginTop="@dimen/_44sdp"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/viewPager"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/viewPager"-->
+    <!--        app:piv_animationType="worm"-->
+    <!--        app:piv_radius="5dp"-->
+    <!--        app:piv_selectedColor="@color/white"-->
+    <!--        app:piv_strokeWidth="5dp"-->
+    <!--        app:piv_unselectedColor="@color/firstonboarding"-->
+    <!--        app:piv_viewPager="@id/viewPager" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

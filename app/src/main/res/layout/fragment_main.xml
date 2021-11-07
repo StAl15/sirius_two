@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <View
+    <ImageView
         android:id="@+id/viewActual"
         android:layout_width="20dp"
         android:layout_height="5dp"
@@ -18,12 +18,13 @@
         app:layout_constraintTop_toBottomOf="@+id/actual_btn" />
 
 
-    <View
+    <ImageView
         android:id="@+id/viewCompleted"
         android:layout_width="20dp"
         android:layout_height="5dp"
         android:layout_marginTop="4dp"
         android:visibility="invisible"
+
         android:background="@drawable/rect_adress"
         android:backgroundTint="#3656F9"
         app:layout_constraintEnd_toEndOf="@+id/completed_btn"
@@ -35,12 +36,69 @@
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_60sdp"
+        app:layout_constraintBottom_toTopOf="@id/btn_buy_next_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewActual"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintVertical_bias="0.074">
 
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/btn_buy_next_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/rect_home_buy_clean"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:src="@drawable/ic_twemoji_high_voltage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="от 650 ₽"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Заказать уборку"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_onboarding2_next"
+
+            />
+
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -59,12 +117,14 @@
         android:id="@+id/woman_clear"
         android:layout_width="@dimen/_320sdp"
         android:layout_height="@dimen/_460sdp"
-        android:layout_marginBottom="@dimen/_75sdp"
+        android:layout_marginBottom="@dimen/_69sdp"
         android:src="@drawable/ic_cleaner_woman_svg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actual_btn"
+        android:layout_marginTop="@dimen/_30sdp"/>
 
     <ImageView
         android:id="@+id/imageView4"
@@ -196,56 +256,6 @@
         app:layout_constraintStart_toEndOf="@+id/actual_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/btn_buy_next_main"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_25sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:background="@drawable/rect_home_buy_clean"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerview">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:src="@drawable/ic_twemoji_high_voltage" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="от 650 ₽"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_14ssp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="@dimen/_35sdp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Заказать уборку"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp" />
-
-        <ImageView
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:src="@drawable/ic_onboarding2_next"
-
-            />
-
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
